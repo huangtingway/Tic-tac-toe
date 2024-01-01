@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		xmlns:tools = "http://schemas.android.com/tools"
+		xmlns:app = "http://schemas.android.com/apk/res-auto"
+		android:layout_width = "match_parent"
+		android:id = "@+id/main"
+		android:orientation = "vertical"
+		android:layout_height = "match_parent"
+		android:background = "#333"
+		tools:context = ".MainActivity">
+	<TextView android:layout_width = "match_parent"
+	          android:layout_height = "wrap_content"
+	          android:layout_alignParentTop = "true"
+	          android:id = "@+id/title"
+	          android:text = "Circle Fork"
+	          android:textSize = "30dp"
+	          android:textColor = "#EEE"
+	          android:gravity = "center"
+	          android:background = "#333"
+	          android:textStyle = "bold"
+	          android:padding = "10dp"
+	/>
+
+	<LinearLayout android:layout_width = "match_parent"
+	              android:layout_height = "wrap_content"
+	              android:orientation="horizontal"
+	              android:id="@+id/bottom"
+	              android:gravity="center"
+	              android:layout_alignParentBottom="true">
+
+		<Button android:layout_width = "wrap_content"
+		        android:layout_height = "wrap_content"
+		        android:textSize = "15dp"
+		        android:text = "restart"
+		        android:background = "#666"
+		        android:id = "@+id/restart"
+		        android:textColor = "#EEE"
+		        android:layout_margin = "10dp"
+		        android:onClick = "restart"
+		/>
+
+		<Button android:layout_width = "wrap_content"
+		        android:layout_height = "wrap_content"
+		        android:textSize = "15dp"
+		        android:text = "option"
+		        android:background = "#666"
+		        android:id = "@+id/option"
+		        android:textColor = "#EEE"
+		        android:onClick="option"
+		        android:layout_margin = "10dp"
+		/>
+
+	</LinearLayout>
+
+	<LinearLayout
+			android:layout_width = "match_parent"
+			android:layout_above = "@id/bottom"
+			android:layout_below = "@id/title"
+			android:orientation = "vertical"
+			android:layout_height = "wrap_content">
+
+		<com.example.circlr_fork.play_view
+				android:layout_width = "match_parent"
+				android:layout_height = "0dp"
+				android:layout_weight = "50"
+				android:id = "@+id/play_view"
+				android:layout_above = "@id/record"
+				android:layout_gravity = "center"
+				android:background = "@drawable/background_1"
+				android:layout_margin = "20dp"
+		/>
+
+		<LinearLayout android:layout_width = "match_parent"
+		              android:layout_height = "0dp"
+		              android:layout_weight = "20"
+		              android:id = "@+id/record"
+		              android:layout_below = "@id/play_view"
+		              android:orientation = "horizontal">
+
+			<LinearLayout android:layout_width = "0dp"
+			              android:layout_height = "match_parent"
+			              android:layout_weight="50"
+			              android:gravity="center"
+			              android:orientation="vertical">
+
+				<ImageView android:layout_width = "wrap_content"
+				           android:layout_height = "0dp"
+				           android:layout_weight="80"
+				           android:id = "@+id/circle_view"
+				           app:srcCompat = "@drawable/circle_1"/>
+
+				<TextView android:layout_width = "wrap_content"
+				          android:layout_height = "0dp"
+				          android:layout_weight="20"
+				          android:textSize = "20dp"
+				          android:textColor = "#EEE"
+				          android:id = "@+id/circle_win"
+				          android:text = "win:"/>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width = "0dp"
+			              android:layout_height = "match_parent"
+			              android:layout_weight="50"
+			              android:gravity="center"
+			              android:orientation="vertical">
+
+				<ImageView android:layout_width = "wrap_content"
+				           android:layout_height = "0dp"
+				           android:layout_weight = "80"
+				           android:id = "@+id/x_view"
+				           app:srcCompat = "@drawable/x_1"/>
+
+				<TextView android:layout_width = "wrap_content"
+				          android:layout_height = "0dp"
+				          android:layout_weight="20"
+				          android:textSize = "20dp"
+				          android:textColor = "#EEE"
+				          android:id = "@+id/x_win"
+				          android:text = "win:"/>
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</RelativeLayout>
+
